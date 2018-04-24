@@ -1,9 +1,13 @@
 
 mod quantum {
-    // for now just storing real values amplitudes.
+    // in future use complex numbers structure.
     struct Qubit {
-        alpha: f64,
-        betha: f64
+        
+        alpha_real: f32,
+        alpha_imag: f32,
+        
+        betha_real: f32,
+        betah_imag: f32
     }
 
     
