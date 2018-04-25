@@ -7,26 +7,17 @@ mod quantum {
     // in future use complex numbers structure.
     struct Qubit {
         
-        alpha_real: f32,
-        alpha_imag: f32,
-        
-        betha_real: f32,
-        betha_imag: f32
+        alpha: Complex,
+        betha: Complex
     }
 
     const ZERO : Qubit = Qubit { 
-        alpha_real: 1.0,
-        alpha_imag: 0.0,
-
-        betha_real: 0.0,
-        betha_imag: 0.0 };
+        alpha: Complex {real: 1.0, image:0.0 },
+        betha: Complex {real: 0.0, image:0.0 } };
     
-    const ONE : Qubit = Qubit { 
-        alpha_real: 0.0,
-        alpha_imag: 0.0,
-
-        betha_real: 1.0,
-        betha_imag: 0.0 };
+    const ZERO : Qubit = Qubit { 
+        alpha: Complex {real: 0.0, image:0.0 },
+        betha: Complex {real: 1.0, image:0.0 } };
 
     // unitary gates
     fn h(q: Qubit) { // Hadamard
