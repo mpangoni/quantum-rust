@@ -25,12 +25,26 @@ mod quantum {
         betha_real: 1.0,
         betha_imag: 0.0 };
 
-    fn h(a: Qubit) {
+    // unitary gates
+    fn h(q: Qubit) { // Hadamard
         
     }
 
-    fn x(a: Qubit, b: Qubit){
+    fn x(q: Qubit) { //   Pauli-X gate or NOT gate
 
+    }
+    
+    // controled gates
+    fn cnot(c: Qubit, t: Qubit) {
+    
+    }
+    
+    fn ccnot(c1: Qubit, c2: Qubit, t:Qubit) { // Toffoli Gate
+        
+    }
+    
+    fn cswap(c: Qubit, t1: Quibit, t2:Qubit) { // Fredkin Gate
+    
     }
 
 }
