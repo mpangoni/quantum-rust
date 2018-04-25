@@ -11,19 +11,28 @@ mod quantum {
         betha_imag: f32
     }
 
-    const ZERO : Qubit = { 
-        alpha_real = 1.0,
-        alpha_imag = 0.0,
+    const ZERO : Qubit = Qubit { 
+        alpha_real: 1.0,
+        alpha_imag: 0.0,
 
-        betha_real = 0.0,
-        betha_imag = 0.0 }
+        betha_real: 0.0,
+        betha_imag: 0.0 };
     
-    const ONE : Qubit = { 
+    const ONE : Qubit = Qubit { 
         alpha_real: 0.0,
         alpha_imag: 0.0,
 
         betha_real: 1.0,
-        betha_imag: 0.0 }
+        betha_imag: 0.0 };
+
+    fn h(a: Qubit) {
+        
+    }
+
+    fn x(a: Qubit, b: Qubit){
+
+    }
+
 }
 
 #[cfg(test)]
