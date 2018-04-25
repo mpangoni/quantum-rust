@@ -1,4 +1,7 @@
 
+mod complexmath;
+use complexmath::Complex as Complex;
+
 mod quantum {
 
     // in future use complex numbers structure.
