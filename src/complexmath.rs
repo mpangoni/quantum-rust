@@ -1,6 +1,6 @@
 
 
-mod numbers{
+mod complexmath{
 
   struct Complex {
     
@@ -8,6 +8,5 @@ mod numbers{
     image: f32
     
   }
-
 
 }
