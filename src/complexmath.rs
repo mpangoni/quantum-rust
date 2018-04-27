@@ -25,8 +25,8 @@ impl ops::Mul for Complex {
 
   fn mul(self, _rhs: Complex) -> Complex {
     Complex {
-      real: self.real * _rhs.real,
-      image: self.image * _rhs.image
+      real: self.real * _rhs.real - self.image * _rhs.image,
+      image: self.real * _rhs.image + self.image * _rhs.real
     }
   }
 } 

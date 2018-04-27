@@ -21,6 +21,11 @@ mod quantum {
         betha: Complex {real: 1.0, image:0.0 } };
 
     // unitary gates
+    pub fn u(q: Qubit, m: [f34;4]){
+        q.alpha.real * m[0];
+        q.alpha.image * m[1];
+    }
+
     pub fn h(q: Qubit) { // Hadamard
         
     }
