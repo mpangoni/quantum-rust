@@ -1,13 +1,12 @@
 
-mod complexmath;
+mod complex;
 
 mod quantum {
 
-    use complexmath::Complex;
+    use complex::Complex;
     
     // in future use complex numbers structure.
     pub struct Qubit {
-        
         alpha: Complex,
         betha: Complex
     }
@@ -21,29 +20,28 @@ mod quantum {
         betha: Complex {real: 1.0, image:0.0 } };
 
     // unitary gates
-    pub fn u(q: Qubit, m: [f34;4]){
-        q.alpha.real * m[0];
-        q.alpha.image * m[1];
+    pub fn u(q: &mut Qubit, m: (f32, f32, f32, f32)){
+
     }
 
-    pub fn h(q: Qubit) { // Hadamard
-        
+    pub fn h(q: &mut Qubit) { // Hadamard
+        let matrix = (0, 1, 1, 0);
     }
 
-    pub fn x(q: Qubit) { //   Pauli-X gate or NOT gate
+    pub fn x(q: &mut Qubit) { // Pauli-X gate or NOT gate
 
     }
     
     // controled gates
-    pub fn cnot(c: Qubit, t: Qubit) {
+    pub fn cnot(c: &Qubit, t: &mut Qubit) {
     
     }
     
-    pub fn ccnot(c1: Qubit, c2: Qubit, t:Qubit) { // Toffoli Gate
+    pub fn ccnot(c1: &Qubit, c2: &Qubit, t: &mut Qubit) { // Toffoli Gate
         
     }
     
-    pub fn cswap(c: Qubit, t1: Qubit, t2:Qubit) { // Fredkin Gate
+    pub fn cswap(c: &Qubit, t1: &mut Qubit, t2: &mut Qubit) { // Fredkin Gate
     
     }
 
@@ -53,5 +51,3 @@ mod quantum {
 mod tests {
 
 }
-
-

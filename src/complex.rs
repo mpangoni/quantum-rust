@@ -7,15 +7,26 @@ pub struct Complex {
   
 }
 
-// + operator for complex number
+impl Complex {
+
+  fn new( r: f32, i: f32) -> Complex {      
+      Complex {
+        real: r, image: i
+      }
+  }
+}
+
+// + operator for complex numbers (complex = complex + complex)
 impl ops::Add for Complex {
   type Output = Complex;
 
   fn add(self, _rhs: Complex) -> Complex {
+
     Complex {
       real: self.real + _rhs.real,
       image: self.image + _rhs.image
     }
+
   }
 }
 
@@ -51,8 +62,8 @@ mod tests {
   #[test]
   fn test_multiplication() {
 
-    let a = Complex { real: 2.0, image: 4.0};
-    let b = Complex { real: 0.5, image: 0.5};
+    let a = Complex::new( 2.0,  4.0);
+    let b = Complex::new( 0.5,  0.5);
 
     let result =  a * b;
     assert_eq!( result.real, 1.0);
