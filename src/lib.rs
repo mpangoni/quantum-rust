@@ -12,12 +12,14 @@ mod quantum {
     }
 
     pub const ZERO : Qubit = Qubit { 
-        alpha: Complex {real: 1.0, image:0.0 },
-        betha: Complex {real: 0.0, image:0.0 } };
-    
+        alpha: Complex::new(1.0, 0.0),
+        betha: Complex::new(0.0, 0.0);
+    }
+
     pub const ONE : Qubit = Qubit { 
-        alpha: Complex {real: 0.0, image:0.0 },
-        betha: Complex {real: 1.0, image:0.0 } };
+        alpha: Complex::new(0.0, 0.0),
+        betha: Complex::new(1.0, 0.0);
+    }
 
     // unitary gates
     pub fn u(q: &mut Qubit, m: (f32, f32, f32, f32)){
